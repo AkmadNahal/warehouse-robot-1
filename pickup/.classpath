@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/jetty-all-9.0.4.v20130625.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/servlet-api-3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/commons-codec-1.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/fluent-hc-4.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/httpclient-4.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/httpclient-cache-4.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/httpcore-4.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/httpmime-4.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/org.apache.httpcomponents.httpclient_4.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/json-20140107.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/json-simple-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/manoj/work/InnoWeek/warehouse/org.json-chargebee-1.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

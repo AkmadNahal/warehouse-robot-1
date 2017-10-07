@@ -1,0 +1,286 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.amaze_on.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/relativeLayout1"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginTop="18dp" >
+
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:onClick="iphone616"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/iphone6" />
+
+        <TextView
+            android:id="@+id/TextView05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/ImageView02"
+            android:layout_below="@+id/ImageView02"
+            android:gravity="center|center"
+            android:text="IPhone 6"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/TextView06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/ImageView02"
+            android:layout_below="@+id/TextView05"
+            android:gravity="center|center"
+            android:text="16GB"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/TextView04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/TextView06"
+            android:layout_below="@+id/TextView06"
+            android:gravity="center|center"
+            android:text="Rs. 1 lakh"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/Button02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/TextView04"
+            android:layout_below="@+id/TextView04"
+            android:maxHeight="5dp"
+            android:maxWidth="5dp"
+            android:minHeight="5dp"
+            android:minWidth="5dp"
+            android:text="Buy"
+            android:onClick="iphone616"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/RelativeLayout02"
+        android:layout_alignTop="@+id/RelativeLayout01" >
+
+        <ImageView
+            android:id="@+id/ImageView05"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="iphone632"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/iphone6" />
+
+        <TextView
+            android:id="@+id/TextView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/ImageView05"
+            android:layout_below="@+id/ImageView05"
+            android:gravity="center|center"
+            android:text="IPhone 6"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/TextView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/ImageView05"
+            android:layout_below="@+id/TextView15"
+            android:gravity="center|center"
+            android:text="32GB"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/TextView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/TextView14"
+            android:layout_below="@+id/TextView14"
+            android:gravity="center|center"
+            android:text="Rs. 2 lakhs"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/Button05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/TextView13"
+            android:layout_below="@+id/TextView13"
+            android:maxHeight="5dp"
+            android:maxWidth="5dp"
+            android:minHeight="5dp"
+            android:minWidth="5dp"
+            android:onClick="iphone632"
+            android:text="Buy"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Amaze - On"
+        android:textSize="30dp"
+        android:gravity="center|center"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="16dp" >
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/ImageView01"
+            android:layout_below="@+id/ImageView01"
+            android:gravity="center|center"
+            android:text="IPhone 4S"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/ImageView01"
+            android:layout_below="@+id/TextView02"
+            android:gravity="center|center"
+            android:text="16GB"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/TextView01"
+            android:layout_below="@+id/TextView01"
+            android:gravity="center|center"
+            android:text="Rs. 40,000"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/Button01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/TextView03"
+            android:layout_below="@+id/TextView03"
+            android:maxHeight="5dp"
+            android:maxWidth="5dp"
+            android:minHeight="5dp"
+            android:minWidth="5dp"
+            android:text="Buy"
+            android:onClick="iphone4"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:onClick="iphone4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/iphone4s" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/RelativeLayout01"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp" >
+
+        <ImageView
+            android:id="@+id/ImageView03"
+            android:layout_width="100dp"
+            android:onClick="nexus5"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/nexus5" />
+
+        <TextView
+            android:id="@+id/TextView08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/ImageView03"
+            android:layout_below="@+id/ImageView03"
+            android:gravity="center|center"
+            android:text="Nexus 5"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/TextView09"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/ImageView03"
+            android:layout_below="@+id/TextView08"
+            android:gravity="center|center"
+            android:text="32GB"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/TextView07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/TextView09"
+            android:layout_below="@+id/TextView09"
+            android:gravity="center|center"
+            android:text="Rs. 20,000"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/Button03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/TextView07"
+            android:layout_below="@+id/TextView07"
+            android:maxHeight="5dp"
+            android:maxWidth="5dp"
+            android:minHeight="5dp"
+            android:minWidth="5dp"
+            android:text="Buy"
+            android:onClick="nexus5"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

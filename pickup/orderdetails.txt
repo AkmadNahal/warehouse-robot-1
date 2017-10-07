@@ -1,0 +1,22 @@
+{
+    "p1": {
+        "route": [
+            {
+                "direction": "straight",
+                "rotations": "3"
+            },
+			{
+                "direction": "left",
+                "rotations": "1"
+            }
+        ]
+    },
+    "p2": {
+        "route": [
+            {
+                "direction": "straight",
+                "rotations": "3"
+            }
+        ]
+    }
+}
