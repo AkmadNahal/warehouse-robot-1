@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.sap.gw.rt</groupId>
+		<artifactId>camel.content</artifactId>
+		<version>1.3.3-SNAPSHOT</version>
+		<relativePath>../parent</relativePath>
+	</parent>
+
+	<properties>
+		<sapui5.release>1.9.1</sapui5.release>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+
+	<artifactId>camel.content.jdbcservice</artifactId>
+	<packaging>bundle</packaging>
+
+	<name>com.sap.gw.rt.camel.content.jdbcservice</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>camel.components.odatajdbc</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.olingo</groupId>
+			<artifactId>olingo-odata2-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>ip.commons.camel-commons</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>camel.components.custom-development</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<!-- camel -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<defaultGoal>install</defaultGoal>
+
+		<plugins>
+			<plugin>
+				<groupId>com.sap.prd.codesign</groupId>
+				<artifactId>com.sap.prd.codesign.maven-jarsigner-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Import-Package>
+							com.sap.gateway.ip.core.customdev.api,*
+						</Import-Package>
+						<Private-Package>com.sap.gateway.content.ip.jdbc</Private-Package>
+						<DynamicImport-Package>*</DynamicImport-Package>
+						<Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>
+						<Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
+						<Bundle-Activator>com.sap.gateway.core.service.ljs.registry.ServiceRegistrationActivator</Bundle-Activator>
+						<ServiceName>TolaService</ServiceName>
+						<ServiceNamespace>sap</ServiceNamespace>
+						<ServiceDescription>JDBC TolaService for demo</ServiceDescription>
+						<ServiceVersion>1</ServiceVersion>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

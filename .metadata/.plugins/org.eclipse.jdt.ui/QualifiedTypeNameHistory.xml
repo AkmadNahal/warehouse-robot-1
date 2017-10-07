@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.http.impl.client.DefaultHttpClient"/>
+<fullyQualifiedTypeName name="org.apache.http.client.methods.HttpPost"/>
+<fullyQualifiedTypeName name="org.apache.http.entity.StringEntity"/>
+<fullyQualifiedTypeName name="org.apache.http.HttpResponse"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.apache.http.client.methods.HttpGet"/>
+<fullyQualifiedTypeName name="org.apache.http.util.EntityUtils"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+<fullyQualifiedTypeName name="javax.net.ssl.X509TrustManager"/>
+<fullyQualifiedTypeName name="javax.security.cert.X509Certificate"/>
+<fullyQualifiedTypeName name="javax.security.cert.CertificateException"/>
+<fullyQualifiedTypeName name="javax.net.ssl.SSLContext"/>
+<fullyQualifiedTypeName name="org.apache.http.conn.ssl.X509HostnameVerifier"/>
+<fullyQualifiedTypeName name="javax.net.ssl.TrustManager"/>
+<fullyQualifiedTypeName name="javax.net.ssl.SSLSocketFactory"/>
+<fullyQualifiedTypeName name="org.apache.http.conn.ssl.SSLSocketFactory"/>
+<fullyQualifiedTypeName name="org.apache.http.conn.ClientConnectionManager"/>
+<fullyQualifiedTypeName name="org.apache.http.client.HttpClient"/>
+<fullyQualifiedTypeName name="org.apache.http.conn.scheme.SchemeRegistry"/>
+<fullyQualifiedTypeName name="org.apache.http.conn.scheme.Scheme"/>
+<fullyQualifiedTypeName name="org.apache.http.HttpHost"/>
+<fullyQualifiedTypeName name="org.apache.http.conn.params.ConnRoutePNames"/>
+<fullyQualifiedTypeName name="org.apache.http.impl.client.DefaultRedirectStrategy"/>
+<fullyQualifiedTypeName name="org.apache.http.HttpRequest"/>
+<fullyQualifiedTypeName name="org.apache.http.ProtocolException"/>
+<fullyQualifiedTypeName name="org.apache.http.impl.client.LaxRedirectStrategy"/>
+<fullyQualifiedTypeName name="org.apache.http.impl.client.DefaultRedirectHandler"/>
+<fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.text.DateFormat"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+</qualifiedTypeNameHistroy>

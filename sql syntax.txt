@@ -1,0 +1,29 @@
+CREATE TABLE productDetails
+(
+productId varchar(255),
+productName varchar(255),
+productType varchar(255),
+productVersion varchar(255),
+productLocation varchar(255),
+productPrice varchar(255)
+);
+
+CREATE TABLE orderDetails
+(
+orderId varchar(255),
+customerName varchar(255),
+customerAddress varchar(255),
+customerPhone varchar(255)
+);
+
+
+insert into productDetails value("101","Nexus 5","Mobile","16GB","{\"route\":[{\"direction\":\"straight\",\"rotations\":\"3\"},{\"direction\":\"left\",\"rotations\":\"1\"},{\"direction\":\"straight\",\"rotations\":\"5\"}]}","20000")
+
+insert into productDetails value("101","Nexus 6","Mobile","16GB","{\"route\":[{\"direction\":\"straight\",\"rotations\":\"3\"},{\"direction\":\"left\",\"rotations\":\"1\"},{\"direction\":\"straight\",\"rotations\":\"5\"}]}","40000")
+
+insert into productDetails value("101","IPhone 6","Mobile","16GB","{\"route\":[{\"direction\":\"straight\",\"rotations\":\"3\"},{\"direction\":\"left\",\"rotations\":\"1\"},{\"direction\":\"straight\",\"rotations\":\"5\"}]}","1 lakh")
+
+insert into productDetails value("101","Iphone 6","Mobile","32GB","{\"route\":[{\"direction\":\"straight\",\"rotations\":\"3\"},{\"direction\":\"left\",\"rotations\":\"1\"},{\"direction\":\"straight\",\"rotations\":\"5\"}]}","2 lakhs")
+
+select * from productDetails
+

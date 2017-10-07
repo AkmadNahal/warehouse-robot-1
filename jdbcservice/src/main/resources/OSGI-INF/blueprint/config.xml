@@ -1,0 +1,121 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+	<bean id="odataSqlProcessor"
+		class="com.sap.gateway.core.ip.jdbc.runtime.ODataToSqlProcessor" />
+
+	<bean id="odata" class="com.sap.gateway.core.ip.component.odata.ODataComponent" />
+	<bean id="odatajdbc"
+		class="com.sap.gateway.core.ip.jdbc.runtime.ODataToJDBCProcessor" />
+
+	<bean id="ipjdbc"
+		class="com.sap.gateway.core.ip.camel.component.jdbc.JdbcComponent"
+		scope="prototype" />
+		
+	<bean id="requestProcessor"
+		class="com.sap.gateway.content.ip.jdbc.IntegrationGatewayJDBCExtensionRequest" />
+
+	<bean id="responseProcessor"
+		class="com.sap.gateway.content.ip.jdbc.IntegrationGatewayJDBCExtensionResponse" />
+	
+	<bean id="customprocessor" class="com.sap.gateway.ip.core.customdev.processor.IGWScriptProcessor" />
+
+
+	<camelContext xmlns="http://camel.apache.org/schema/blueprint">
+
+		<route>
+			<!-- incoming requests for Products -->
+			<from uri="odata:SAP/TOLASERVICE:productDetails" />
+			
+			<setHeader headerName="senderuri">
+				<simple resultType="java.lang.String">odata:SAP/TOLASERVICE:productDetails</simple>
+			</setHeader>
+			<bean method="process" ref="odataSqlProcessor" />
+			<!-- Specify the script file with the extension -->
+			<doTry>
+				<to uri="ipjdbc:dataSource" />
+				<doCatch>
+					<exception>java.sql.SQLIntegrityConstraintViolationException
+					</exception>
+					<handled>
+						<constant>true</constant>
+					</handled>
+					<bean method="catchJdbcException" ref="odatajdbc" />
+				</doCatch>
+			</doTry>
+
+			<choice>
+				<when>
+					<simple>${in.header.ODataMethod} == 'CREATE_ENTRY'</simple>
+					<bean method="readResult" ref="odatajdbc" />
+					<to uri="ipjdbc:dataSource" />
+					<bean method="processResult" ref="odatajdbc" />
+				</when>
+				<otherwise>
+				<!-- Specify the script file with the extension -->
+				<setHeader headerName="scriptFile">
+					<simple resultType="java.lang.String">IntegrationGatewayJDBCResponse.js</simple>
+				</setHeader>
+				<!-- Specify file type as either javascript or groovy -->
+				<setHeader headerName="scriptFileType">
+					<simple resultType="java.lang.String">javascript</simple>
+				</setHeader> 
+					<bean method="process" ref="customprocessor" />
+					<!-- <bean method="process" ref="responseProcessor" /> -->
+					<bean method="processResult" ref="odatajdbc" />
+				</otherwise>
+			</choice>
+
+		</route>
+		<route>
+			<!-- incoming requests for Products -->
+			<from uri="odata:SAP/TOLASERVICE:orderDetails" />
+			<setHeader headerName="scriptFile">
+				<simple resultType="java.lang.String">CustomProcessorMapping.js</simple>
+			</setHeader>
+			<!-- Specify file type as either javascript or groovy -->
+			<setHeader headerName="scriptFileType">
+				<simple resultType="java.lang.String">javascript</simple>
+			</setHeader> 
+			<bean method="process" ref="customprocessor" />
+			<setHeader headerName="senderuri">
+				<simple resultType="java.lang.String">odata:SAP/TOLASERVICE:ordertDetails</simple>
+			</setHeader>
+			<bean method="process" ref="odataSqlProcessor" />
+			<!-- Specify the script file with the extension -->
+			<doTry>
+				<to uri="ipjdbc:dataSource" />
+				<doCatch>
+					<exception>java.sql.SQLIntegrityConstraintViolationException
+					</exception>
+					<handled>
+						<constant>true</constant>
+					</handled>
+					<bean method="catchJdbcException" ref="odatajdbc" />
+				</doCatch>
+			</doTry>
+
+			<choice>
+				<when>
+					<simple>${in.header.ODataMethod} == 'CREATE_ENTRY'</simple>
+					<bean method="readResult" ref="odatajdbc" />
+					<to uri="ipjdbc:dataSource" />
+					<bean method="processResult" ref="odatajdbc" />
+				</when>
+				<otherwise>
+				<!-- Specify the script file with the extension -->
+				<setHeader headerName="scriptFile">
+					<simple resultType="java.lang.String">IntegrationGatewayJDBCResponse.js</simple>
+				</setHeader>
+				<!-- Specify file type as either javascript or groovy -->
+				<setHeader headerName="scriptFileType">
+					<simple resultType="java.lang.String">javascript</simple>
+				</setHeader> 
+					<bean method="process" ref="customprocessor" />
+					<!-- <bean method="process" ref="responseProcessor" /> -->
+					<bean method="processResult" ref="odatajdbc" />
+				</otherwise>
+			</choice>
+
+		</route>
+	</camelContext>
+
+</blueprint>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/manoj/work/InnoWeek/warehouse/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="C:/manoj/work/InnoWeek/warehouse/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/manoj/work/InnoWeek/warehouse/fluent-hc-4.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/manoj/work/InnoWeek/warehouse/httpclient-4.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/manoj/work/InnoWeek/warehouse/httpclient-cache-4.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/manoj/work/InnoWeek/warehouse/httpcore-4.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/manoj/work/InnoWeek/warehouse/httpmime-4.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/manoj/work/InnoWeek/warehouse/org.apache.httpcomponents.httpclient_4.2.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<edmx:Edmx Version="1.0"
+	xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+	xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+	<edmx:DataServices
+		xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+		m:DataServiceVersion="2.0">
+		<Schema Namespace="ODataDemo">
+			<!-- Entity Types Declaration -->
+			<EntityType Name="productDetail">
+				<Key>
+					<PropertyRef Name="productId"/>
+				</Key>
+				<Property Name="productId" Nullable="false" Type="Edm.String"/>
+				<Property Name="productName" Nullable="false" Type="Edm.String"/>
+				<Property Name="productType" Nullable="false" Type="Edm.String"/>
+				<Property Name="productVersion" Nullable="false" Type="Edm.String"/>
+				<Property Name="productLocation" Nullable="false" Type="Edm.String"/>
+				<Property Name="productPrice" Nullable="false" Type="Edm.String"/>
+				
+			</EntityType>
+			
+			<EntityType Name="orderDetail">
+				<Key>
+					<PropertyRef Name="orderId" />
+				</Key>
+				<Property Name="orderId" Nullable="false" Type="Edm.String"/>
+				<Property Name="customerName" Nullable="false" Type="Edm.String"/>
+				<Property Name="customerAddress" Nullable="false" Type="Edm.String"/>
+				<Property Name="customerPhone" Nullable="false" Type="Edm.String"/>
+				
+			</EntityType>
+			
+			<!-- End TEA Entities -->
+			
+			<!-- EntityContainer Start -->
+			<EntityContainer Name="WarehouseService"
+				m:IsDefaultEntityContainer="true">
+				<EntitySet Name="productDetails" EntityType="ODataDemo.productDetail" />
+				<EntitySet Name="orderDetails" EntityType="ODataDemo.orderDetail" />
+				
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
